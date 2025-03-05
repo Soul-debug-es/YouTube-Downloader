@@ -1,10 +1,10 @@
-import pytube
+import pytubefix
 import streamlit as st
 
 class YouTubeDownloader:
     def __init__(self, url):
         self.url = url
-        self.youtube = pytube.YouTube(self.url, on_progress_callback=YouTubeDownloader.onProgress)
+        self.youtube = pytubefix.YouTube(self.url, on_progress_callback=YouTubeDownloader.onProgress)
         self.stream = None
 
     def showTitle(self):
